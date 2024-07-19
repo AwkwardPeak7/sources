@@ -1,6 +1,6 @@
 const variable = Object.keys(window).find(key => {
   const value = window[key];
-  return Array.isArray(value) && value.every(item => typeof item === 'string' && item.includes('blogspot'));
+  return Array.isArray(value) && value.every(item => typeof item === 'string' && (item.includes('blogspot') || item.includes('whatsnew247')));
 });
 
-eval(window[variable]);
+console.log(window[variable]);
